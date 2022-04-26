@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Alura DEV</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://alurachallenge-frontend.vercel.app/fontawesome/css/all.css">
+
+    </head>
+
+    <body>
+        <header>
+            <div class="header-descktop">
+                <img src="img/Logo.svg">
+
+                <input type="text" id="barradepesquisa" placeholder="Busque por algo">
+
+                <div class="perfil">
+                    <img class="perfilFoto" src="img/unnamed.webp">
+                    <a>Igor M.G.</a>
+                </div>
+
+            </div>
+        </header>
+        
+        <main>
+
+            <section class="menu">
+                <a id="textoMenu">MENU</a>
+
+                <a href="index.html" class="menusPaginas">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    Editor de Código
+                </a>
+                
+                <a href="comunidade.html" class="menusPaginas">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    Comunidade
+                </a>
+            </section>
+
+            <section class="editor">
+                <div class="editorCampo-background">
+                    <code contenteditable="true" class="editorCampo"  aria-label="Editor de Código" data-codigo=""></code>
+                </div>
+
+                <button>Visualizar com o hightlight</button>
+                
+            </section>
+
+            <section class="projeto">
+                    <a>SEU PROJETO</a>
+                    
+                    <input type="text" id="projetoNome" placeholder="Nome do seu projeto">
+                    <textarea type="text" id="projetoDescricao" placeholder="Descrição do seu projeto" maxlength="200"></textarea>
+
+                    <a class="personalizar">PERSONALIZAÇÃO</a>
+
+                    <select class="entrada" data-linguagem>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                    </select>
+
+                    <input type="color" aria-label="cor" class="projetoBackground" value="#6BD1FF" data-cor-input="">
+
+                    <button>Salvar projeto</button>
+
+            </section>
+        </main>
+    </body>
+</html>
+    
