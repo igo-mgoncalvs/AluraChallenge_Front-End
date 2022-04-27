@@ -99,3 +99,9 @@ main {
     border-radius: 16px;
     margin-right: 15px;
 }
+
+/*-------------Mobile----------*/
+
+@media (max-width: 768px) {
+    
+}
