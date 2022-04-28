@@ -101,3 +101,14 @@ main {
 }
 
 /*-------------Mobile----------*/
+
+@media (max-width: 720px) {
+
+    body{
+        padding: 16px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}

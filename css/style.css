@@ -130,9 +130,19 @@ option{
 
 /*-----------Mobile----------*/
 
-@media(max-width: 768px) {
-
+@media (max-width: 720px) {
+    
+    .editorCampo-background {
+        flex: 1 2;
+        margin: 0;
+    }
     .editorCampo {
-        width: 50000px;
+        width: 83%;
+        height: 428px
+    }
+
+    .editor button {
+        width: 343px;
+        height: 56px;
     }
 }
