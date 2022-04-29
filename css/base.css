@@ -86,11 +86,13 @@ body {
     color: var(--branco);
 }
 
-.menu {
+/*-------------------Menu--------------------*/
+
+.menu__mobile{
     display: none;
 }
 
-.menu__mobile{
+.menu {
     display: block;
     position: absolute;
     padding: 1.5rem;
@@ -165,5 +167,14 @@ body {
     .icone-lupa {
         display: none;
     }
+}
 
+@media screen and (min-width: 1024px) {
+
+    .menu__mobile {
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 0;   
+        margin-top: 3.1rem;
+    }
 }
