@@ -1,6 +1,9 @@
 :root {
     --azul-escuro: #051D3B;
     --ciano: #6BD1FF;
+    --azul-claro: #5081FB;
+    --azul-claro-upacidade: #5081FB29;
+    --fundo-menu: #2D415B; 
     --branco:#FFFFFF;
     --preto: #141414;
     --botao-highlight:#5081FB14;
@@ -20,6 +23,15 @@ body {
 
 /*Cabeçalho*/
 
+
+.logo {
+    display: block;
+}
+
+.logo__mobile {
+    display: none;
+}
+
 .cabecalho{
     display: flex;
     align-items: center;
@@ -27,5 +39,102 @@ body {
 }
 
 .cabecalho__icone {
-    margin: 0 1rem;
+    display: flex;
+    margin-left: 1rem;
+}
+
+.icone-menu{
+    background-image:url(../img/Menu.svg);
+    background-repeat: no-repeat;
+    width: 1.5rem;
+}
+
+.icone-fechar {
+    background-image:url(../img/Fechar.svg);
+    background-repeat: no-repeat;
+    width: 1.5rem;
+}
+
+.cabecalho__icone:focus {
+    padding: 600px;
+}
+
+.barradepesquisa {
+    display: none;
+}
+
+.barradepesquisa__mobile{
+    display: flex;
+}
+
+.barradepesquisa-style:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.barradepesquisa-style {
+    background-color: var(--input-cinza);
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    width: 100%;
+    height: 2rem;
+    resize: none;
+    font-family: var(--inter);
+    font-size: 1rem;
+    color: var(--branco);
+}
+
+.menu {
+    display: none;
+}
+
+.menu__mobile{
+    display: block;
+    position: absolute;
+    padding: 1.5rem;
+    left: calc(100vw - 250px);
+    top: 4.5rem;
+    height: 100%;
+    background-color: var(--fundo-menu);
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+
+.menu__mobile ul {
+    border: 0 var(--input-cinza) solid;
+    border-bottom-width: 1px;
+    padding-bottom: 1rem;
+}
+
+.menu__mobile a {
+    display: flex;
+    align-items: center;
+    margin: 0 16px 16px 0;
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.menu__icone {
+    background-color: var(--azul-claro-upacidade);
+    margin-right: 16px;
+    border-radius: 16px;
+    padding: 1rem 0.8rem;
+}
+
+.ativa {
+    background-color: var(--azul-claro);
+}
+
+.perfil {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.perfil__foto {
+    border-radius: 100%;
+    width: 3rem;
+    margin-right: 16px;
 }

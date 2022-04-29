@@ -5,33 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraDEV</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <header class="cabecalho">
-        <img src="img/Logo.svg" alt="Logo do Alu raDEV">
-        <div>
-            <img src="img/Lupa.svg" class="cabecalho__icone" alt="Abrir barra  de pesquisa">
-            <img src="img/Menu.svg" class="cabecalho__icone" alt="Abrir Menu" >
+        <div class="barradepesquisa">
+            <input type="text" name="Barra de Pesquisa" class="barradepesquisa-style" placeholder="Busque por algo">
         </div>
+
+        <img src="img/Logo.svg" class="logo" alt="Logo do Alu raDEV">
+        <div class="cabecalho__icone">
+            <img src="img/Lupa.svg" class="cabecalho__icone icone-lupa" alt="Abrir barra de pesquisa">
+            <i class="cabecalho__icone icone-menu"></i>
+        </div>
+
     </header>
     
     <main>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                    <img src="img/Code.svg" alt="Ir para editor de código" class="menu__icone ativa">
+                    Editor de código
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <img src="img/Comunidade.svg" alt="Ir para Comunidade" class="menu__icone">
+                    Comunidade
+                    </a>
+                </li>
+            </ul>
+
+            <div class="perfil">
+                <img src="img/unnamed.webp" alt="Foto de perfil" class="perfil__foto">
+                <p>Igor M.G.</p>
+            </div>
+        </nav>
+
         <section class="editor">
             <div class="editor__color" >
                 <code class="editor__code" contenteditable="true" maxlength="200"></code>
             </div>
-            <button class="editor__button">Visualizar com o highlight</button>
+            <button class="button">Visualizar com o highlight</button>
         </section>
 
-        <section class="projeto">
-            <p class="projeto__titulo">PROJETO</p>
+        <section class="titulo">
+            <p>SEU PROJETO</p>
             <input type="text" name="Nome do Projeto" placeholder="Nome do seu projeto" class="projeto__input nome">
             <textarea type="text" name="Descrição do Projeto" placeholder="Descrição do seu projeto" class="projeto__input descricao" maxlength="200"></textarea>
         </section>
+
+        <section class="titulo">
+            <p>PERSONALIZAÇÃO</p>
+            <select name="value" class="projeto__input selecao">
+                <option value="JavaScript" class="selecao">JavaScript</option>
+                <option value="HTML" class="selecao">HTML</option>
+                <option value="CSS" class="selecao">CSS</option>
+            </select>
+            <input type="color" value="#6BD1FF" class="projeto__input color">
+
+            <button class="salvar">Salvar Projeto</button>
+        </section>
         
     </main>
+    <script src="js/main.js"></script>
 </body>
 </html>

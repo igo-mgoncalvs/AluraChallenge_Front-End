@@ -44,10 +44,11 @@
     outline: 0;
 }
 
-.editor__button {
+button {
     background-color: var(--botao-highlight);
     margin: 1rem 0 0 0;
     border: none;
+    border-radius: 8px;
     padding: 1rem;
     color: var(--branco);
     font-family: var(--inter);
@@ -58,7 +59,7 @@
 
 /*Projeto*/
 
-.projeto {
+.titulo {
     display: flex;
     flex-direction: column;
     margin-top: 2.5rem;
@@ -68,7 +69,18 @@
 .projeto__input {
     background-color: var(--input-cinza);
     margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
     width: 100%;
+    resize: none;
+    font-family: var(--inter);
+    font-size: 1rem;
+    color: var(--branco);
+}
+
+.projeto__input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
 
 .nome {
@@ -79,5 +91,28 @@
 .descricao {
     padding: 1rem;
     box-sizing: border-box;
-    height: 48px;
+    flex-grow: 1;
+    height: 4.5rem;
+}
+
+.selecao {
+    padding: 1rem;
+}
+
+option {
+    background-color: var(--azul-escuro);
+}
+
+.color {
+    background-color: var(--azul-escuro);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    padding: 0.2rem;
+    height: 4rem;
+}
+
+.salvar {
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
 }
