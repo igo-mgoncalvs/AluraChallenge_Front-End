@@ -116,3 +116,15 @@ option {
     background-color: var(--azul-claro);
     color: var(--azul-escuro);
 }
+
+@media screen and (min-width: 768px) {
+    .personalizacao {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .selecao {
+        margin-right: 1rem;
+    }
+}

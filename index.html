@@ -13,11 +13,10 @@
 </head>
 <body>
     <header class="cabecalho">
-        <div class="barradepesquisa">
-            <input type="text" name="Barra de Pesquisa" class="barradepesquisa-style" placeholder="Busque por algo">
+        <div class="barradepesquisa__mobile">
+            <input type="text" name="Barra de Pesquisa" class="barradepesquisa-style barradepesquisa" placeholder="Busque por algo">
+            <img src="img/Logo.svg" class="logo__mobile" alt="Logo do AluraDEV">
         </div>
-
-        <img src="img/Logo.svg" class="logo" alt="Logo do Alu raDEV">
         <div class="cabecalho__icone">
             <img src="img/Lupa.svg" class="cabecalho__icone icone-lupa" alt="Abrir barra de pesquisa">
             <i class="cabecalho__icone icone-menu"></i>
@@ -63,12 +62,14 @@
 
         <section class="titulo">
             <p>PERSONALIZAÇÃO</p>
+            <div class="personalizacao">
             <select name="value" class="projeto__input selecao">
                 <option value="JavaScript" class="selecao">JavaScript</option>
                 <option value="HTML" class="selecao">HTML</option>
                 <option value="CSS" class="selecao">CSS</option>
             </select>
             <input type="color" value="#6BD1FF" class="projeto__input color">
+            </div>
 
             <button class="salvar">Salvar Projeto</button>
         </section>

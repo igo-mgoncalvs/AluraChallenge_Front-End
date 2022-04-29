@@ -24,13 +24,14 @@ body {
 /*Cabeçalho*/
 
 
-.logo {
+.logo__mobile {
     display: block;
 }
 
-.logo__mobile {
+.logo {
     display: none;
 }
+
 
 .cabecalho{
     display: flex;
@@ -101,7 +102,6 @@ body {
     letter-spacing: 0;
 }
 
-
 .menu__mobile ul {
     border: 0 var(--input-cinza) solid;
     border-bottom-width: 1px;
@@ -137,4 +137,33 @@ body {
     border-radius: 100%;
     width: 3rem;
     margin-right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .barradepesquisa {
+        display: block;
+    }
+
+    .barradepesquisa__mobile {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-grow: 1;
+    }
+
+    .cabecalho__icone {
+        justify-content: flex-start;
+    }
+
+    .barradepesquisa-style {
+        margin-left: 2rem;
+    }
+    
+    .icone-menu {
+        display: block;
+        height: 1.5rem;
+    }
+    .icone-lupa {
+        display: none;
+    }
+
 }
