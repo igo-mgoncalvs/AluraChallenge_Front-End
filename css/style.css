@@ -1,148 +1,83 @@
-/*--------------Editor-------------*/
-
-.editor {
+.editor{
     display: flex;
     flex-direction: column;
 }
 
-.editorCampo-background{
-    flex-grow: 6;
-    background-color: #6bd1ff;
-    margin: 0 39px;
+.editor__color {
+    background-color: var(--ciano);
+
+    height: 492px;
+    padding: 2rem;
+
+    margin-top: 3.1rem;
+
     border-radius: 8px;
-    padding: 32px;
-    width: 627px;
 }
 
-.editorCampo {
+.editor__code{
     display: block;
-    background-color: #141414;
     background-image: url(../img/mac_buttonsbolinhas.svg);
     background-repeat: no-repeat;
+    background-color: var(--preto);
     background-position: 1rem 1rem;
-    background-size: 40px;
+    background-attachment: local;
+
     border-radius: 8px;
-    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.30);
-    padding-top: 35px;
-    padding: 30px;
-    width: 91%;
-    height: 78%;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 2rem;
+
+    color: var(--branco);
+
+    overflow-y: auto;
+    overflow-wrap: break-word;
+
+    font-family: var(--roboto);
+    font-size: 14px;
 }
 
-
-.editor button {
-    flex-grow: 1;
-    background: rgba(80, 129, 251, 0.08);
-    margin: 40px 39px;
-    border: none;
-    border-radius: 8px;
-    padding: 0;
-    color: #fff;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.editor button:hover {
-    background-color: rgba(80, 128, 251, 0.253);
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-
-/*--------------Projeto------------*/
-
-.projeto {
-    display: flex;
-    flex-direction: column;
-    width: 272px;
-    font-size: 12px;
-}
-
-#projetoNome {
-    background: rgba(255, 255, 255, 0.16);
-    border-radius: 8px;
-    border: none;
-    padding: 16px 14px;
-    flex-grow: 1;
-    margin: 16px 0 8px 0;
-}
-
-#projetoDescricao {
-    background: rgba(255, 255, 255, 0.16);
-    border-radius: 8px;
-    border: none;
-    padding: 14px 16px;
-    margin: 8px 0 40px 0;
-    flex-grow: 1;
-    height: 48px;
-    color: #fff;
-    resize: none;
-}
-
-#projetoDescricao:focus {
+.editor__code:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
 
-.entrada {
-    margin-top: 16px;
-    padding: 16px;
+.editor__button {
+    background-color: var(--botao-highlight);
+    margin: 1rem 0 0 0;
     border: none;
-    background-color: rgba(255, 255, 255, 0.16);
-    flex-grow: 1;
-    border-radius: 8px;
-    color: #fff;
-}
-
-option{
-    background-color: #051D3B;
-}
-
-.projetoBackground{
-    background: #051D3B;
-    margin-top: 16px;
-    border-color: #fff;
-    border-radius: 8px;
-    padding: 3px;
-    width: 271px;
-    height: 60px;
-    flex-grow: 1;
-}
-
-.projeto button {
-    background: #5081FB;
-    margin-top: 40px;
-    border: none;
-    border-radius: 8px;
-    padding: 16px 0;
-    color: #051D3B;
+    padding: 1rem;
+    color: var(--branco);
+    font-family: var(--inter);
+    font-size: 16px;
     font-weight: 400;
-    font-size: 18px;
     line-height: 24px;
 }
 
-.projeto button:hover {
-    background-color: #5080fbd5;
-    transition: 0.5s;
-    cursor: pointer;
+/*Projeto*/
+
+.projeto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    font-size: 12px;
 }
 
-/*-----------Mobile----------*/
+.projeto__input {
+    background-color: var(--input-cinza);
+    margin-top: 1rem;
+    width: 100%;
+}
 
-@media (max-width: 720px) {
-    
-    .editorCampo-background {
-        flex: 1 2;
-        margin: 0;
-    }
-    .editorCampo {
-        width: 83%;
-        height: 428px
-    }
+.nome {
+    padding: 1rem;
+    box-sizing: border-box;
+}
 
-    .editor button {
-        width: 343px;
-        height: 56px;
-    }
+.descricao {
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 48px;
 }

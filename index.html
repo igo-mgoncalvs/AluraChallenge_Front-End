@@ -1,75 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>Alura DEV</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://alurachallenge-frontend.vercel.app/fontawesome/css/all.css">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/base.css">
-        <link rel="stylesheet" href="css/style.css">
-
-    </head>
-
-    <body>
-        <header>
-            <div class="header-descktop">
-                <img src="img/Logo.svg">
-
-                <input type="text" id="barradepesquisa" placeholder="Busque por algo">
-
-                <div class="perfil">
-                    <img class="perfilFoto" src="img/unnamed.webp">
-                    <a>Igor M.G.</a>
-                </div>
-
-            </div>
-        </header>
-        
-        <main class="mobile">
-
-            <section class="menu">
-                <a id="textoMenu">MENU</a>
-
-                <a href="https://igo-mgoncalvs.github.io/AluraChallenge_Front-End" class="menusPaginas">
-                    <i class="fas fa-code" aria-hidden="true"></i>
-                    Editor de Código
-                </a>
-                
-                <a href="comunidade.html" class="menusPaginas">
-                    <i class="fas fa-users" aria-hidden="true"></i>
-                    Comunidade
-                </a>
-            </section>
-
-            <section class="editor">
-                <div class="editorCampo-background">
-                    <code contenteditable="true" class="editorCampo"  aria-label="Editor de Código" data-codigo=""></code>
-                </div>
-
-                <button>Visualizar com o hightlight</button>
-                
-            </section>
-
-            <section class="projeto">
-                    <a>SEU PROJETO</a>
-                    
-                    <input type="text" id="projetoNome" placeholder="Nome do seu projeto">
-                    <textarea type="text" id="projetoDescricao" placeholder="Descrição do seu projeto" maxlength="200"></textarea>
-
-                    <a class="personalizar">PERSONALIZAÇÃO</a>
-
-                    <select class="entrada" data-linguagem>
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="HTML">HTML</option>
-                        <option value="CSS">CSS</option>
-                    </select>
-
-                    <input type="color" aria-label="cor" class="projetoBackground" value="#6BD1FF" data-cor-input="">
-
-                    <button>Salvar projeto</button>
-            </section>
-        </main>
-    </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraDEV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="img/Logo.svg" alt="Logo do Alu raDEV">
+        <div>
+            <img src="img/Lupa.svg" class="cabecalho__icone" alt="Abrir barra  de pesquisa">
+            <img src="img/Menu.svg" class="cabecalho__icone" alt="Abrir Menu" >
+        </div>
+    </header>
     
+    <main>
+        <section class="editor">
+            <div class="editor__color" >
+                <code class="editor__code" contenteditable="true" maxlength="200"></code>
+            </div>
+            <button class="editor__button">Visualizar com o highlight</button>
+        </section>
+
+        <section class="projeto">
+            <p class="projeto__titulo">PROJETO</p>
+            <input type="text" name="Nome do Projeto" placeholder="Nome do seu projeto" class="projeto__input nome">
+            <textarea type="text" name="Descrição do Projeto" placeholder="Descrição do seu projeto" class="projeto__input descricao" maxlength="200"></textarea>
+        </section>
+        
+    </main>
+</body>
+</html>
