@@ -137,9 +137,12 @@ option {
         justify-content: space-between;
     }
 
+    .editor {
+        flex-grow: 0.8;
+    }
+    
     .editor__color {
-        width: 40rem;
-        height: 21rem;
+        height: 18.7rem; 
     }
 
     .personalizacao {

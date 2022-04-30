@@ -100,7 +100,7 @@ body {
     top: 4.5rem;
     height: 100%;
     background-color: var(--fundo-menu);
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 0;
 }
 
@@ -113,15 +113,15 @@ body {
 .menu__mobile a {
     display: flex;
     align-items: center;
-    margin: 0 16px 16px 0;
+    margin: 0 1rem 1rem 0;
     color: var(--branco);
     text-decoration: none;
 }
 
 .menu__icone {
     background-color: var(--azul-claro-upacidade);
-    margin-right: 16px;
-    border-radius: 16px;
+    margin-right: 1rem;
+    border-radius: 1rem;
     padding: 1rem 0.8rem;
 }
 
@@ -138,7 +138,7 @@ body {
 .perfil__foto {
     border-radius: 100%;
     width: 3rem;
-    margin-right: 16px;
+    margin-right: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -171,10 +171,50 @@ body {
 
 @media screen and (min-width: 1024px) {
 
+    body {
+        padding: 32px;
+    }
+
     .menu__mobile {
         display: flex;
         flex-direction: column;
+        flex-grow: 0.1;
         letter-spacing: 0;   
         margin-top: 3.1rem;
+    }
+
+    .menu__mobile ul {
+        border: none;
+    }
+
+    .cabecalho {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .cabecalho p {
+        display: flex;
+        align-items: center;
+        letter-spacing: 0;
+        margin-right: 8px;
+    }
+
+    .cabecalho__icone {
+        display: none;
+    }
+
+    .icone-menu {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .barradepesquisa-style {
+        width: 44rem;
+        margin: 0;
+    }
+
+    .perfil{
+        display: none;
     }
 }
