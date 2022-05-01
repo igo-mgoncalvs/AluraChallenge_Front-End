@@ -141,6 +141,10 @@ body {
     margin-right: 1rem;
 }
 
+.cabecalho p {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     .barradepesquisa {
         display: block;
@@ -216,5 +220,10 @@ body {
 
     .perfil{
         display: none;
+    }
+
+    nav p {
+        margin-bottom: 2rem;
+        letter-spacing: 0.4em;
     }
 }
