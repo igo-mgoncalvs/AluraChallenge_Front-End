@@ -190,7 +190,7 @@ body {
     .menu__mobile {
         display: flex;
         flex-direction: column;
-        flex-grow: 0.1;
+        flex-grow: 0.28;
         letter-spacing: 0;   
         margin-top: 3.1rem;
     }
