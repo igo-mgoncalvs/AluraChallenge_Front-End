@@ -146,6 +146,10 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+    .logo__mobile {
+        order: -1;
+    }
+
     .barradepesquisa {
         display: block;
     }
@@ -177,6 +181,10 @@ body {
 
     body {
         padding: 32px;
+    }
+
+    .logo__mobile {
+        order: 0;
     }
 
     .menu__mobile {
