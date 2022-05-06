@@ -18,3 +18,10 @@ botaoLupa.addEventListener ('click', () => {
     logo.classList.toggle ("logo")
     barradePesquisa.classList.toggle ("barradepesquisa__mobile")
 })
+
+const color = document.querySelector('.color');
+const editorColor =document.querySelector('.editor__color');
+
+color.addEventListener('change', () =>{
+    editorColor.style.backgroundColor = color.value
+})

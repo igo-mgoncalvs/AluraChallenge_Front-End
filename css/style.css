@@ -4,7 +4,7 @@
 }
 
 .editor__color {
-    background-color: var(--ciano);
+    background-color: #6BD1FF;
 
     height: 492px;
     padding: 2rem;
@@ -55,6 +55,11 @@ button {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+}
+
+button:hover {
+    background-color: #5081fb29;
+    cursor: pointer;
 }
 
 /*Projeto*/
@@ -115,6 +120,11 @@ option {
 .salvar {
     background-color: var(--azul-claro);
     color: var(--azul-escuro);
+}
+
+.salvar:hover {
+    background-color: #7c9ef3;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
