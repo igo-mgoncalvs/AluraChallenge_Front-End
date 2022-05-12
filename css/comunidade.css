@@ -1,0 +1,11 @@
+main {
+    display: grid;
+    grid-template-columns: 0.28fr 10px 0.5fr 24px 0.5fr;
+}
+
+.cards__code {
+    grid-column: 3/5;
+    background-color: aqua;
+    padding: 24px;
+}
+
