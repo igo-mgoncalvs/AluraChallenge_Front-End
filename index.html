@@ -1,82 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AluraDEV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/dracula.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <p><img src="img/unnamed.webp" alt="Foto de perfil" class="perfil__foto mobile">Igor M.G.</p>
-        <input type="text" name="Barra de Pesquisa" class="barradepesquisa-style barradepesquisa" placeholder="Busque por algo">
-        <img src="img/Logo.svg" class="logo__mobile" alt="Logo do AluraDEV">
+    <header>
+        <section class="header">
+        <img src="img/Logo.svg" class="logo" alt="Logo do AluraDEV">
+            <input type="text" name="barra de pesquisa" class="input-style header__barradepesquisa" placeholder="Busque por algo">
+            <div class="header__perfil">
+                <p class="header__perfil-nome"><img src="img/unnamed.webp" alt="Foto de perfil" class="header__perfil-foto">Igor M.G.</p>
+            </div>
 
-        <div class="cabecalho__icone">
-            <img src="img/Lupa.svg" class="cabecalho__icone icone-lupa" alt="Abrir barra de pesquisa">
-            <i class="cabecalho__icone icone-menu"></i>
-        </div>
+            <div class="icone-box">
+                <a class="icone icon-lupa"></a>
+                <a class="icone icon-menu"></a>
+            </div>
+        </section>
     </header>
-    
+
     <main>
-        <nav class="menu__mobile">
-            <p>MENU</p>
-            <ul>
-                <li>
-                    <a href="https://igo-mgoncalvs.github.io/AluraChallenge_Front-End/">
-                    <img src="img/Code.svg" alt="Ir para editor de código" class="menu__icone ativa">
-                    Editor de código
-                    </a>
-                </li>
-                <li>
-                    <a href="comunidade.html">
-                    <img src="img/Comunidade.svg" alt="Ir para Comunidade" class="menu__icone">
-                    Comunidade
-                    </a>
-                </li>
-            </ul>
-
-            <div class="perfil">
-                <img src="img/unnamed.webp" alt="Foto de perfil" class="perfil__foto">
-                <p>Igor M.G.</p>
-            </div>
-        </nav>
-
-        <section class="editor">
-            <div class="editor__color" >
-                <code class="editor__code" contenteditable="true"></code>
-            </div>
-            <button class="button">Visualizar com o highlight</button>
+        <section class="menu">
+            <p class="titulo">MENU</p>
+            <nav>
+                <ul class="menu__box">
+                    <li>
+                        <iframe class="menu__icone icon-code"></iframe>
+                        <a href="index.html" class="menu__link">Editor de código</a>
+                    </li>
+                    <li class="desativo">
+                        <iframe class="menu__icone icon-comunidade"></iframe>
+                        <a href="comunidade.html" class="menu__link">Comunidade</a>
+                    </li>
+                </ul>
+            </nav>
         </section>
 
-        <div>
-            <section class="titulo">
-                <p>SEU PROJETO</p>
-                <input type="text" name="Nome do Projeto" placeholder="Nome do seu projeto" class="projeto__input nome">
-                <textarea type="text" name="Descrição do Projeto" placeholder="Descrição do seu projeto" class="projeto__input descricao" maxlength="200"></textarea>
-            </section>
+        <section class="code">
+            <div class="code__campo--box">
+                <code contenteditable="true" id="tab" class="code__campo hljs" aria-label="Editor de Codigo"></code>
+            </div>
 
-            <section class="titulo">
-                <p>PERSONALIZAÇÃO</p>
-                <div class="personalizacao">
-                <select name="value" class="projeto__input selecao">
-                    <option value="JavaScript" class="selecao">JavaScript</option>
-                    <option value="HTML" class="selecao">HTML</option>
-                    <option value="CSS" class="selecao">CSS</option>
+            <button class="botao">Visualizar com o highlight</button>
+        </section>
+
+        <section class="projeto">
+            <p class="titulo">PROJETO</p>
+            <input type="text" class="input-style" placeholder="Nome do seu projeto">
+            <textarea class="input-style descricao" placeholder="Descrição do seu projeto"></textarea>
+
+            <p class="titulo personalizacao">PERSONALIZAÇÃO</p>
+            
+            <div class="responsivo">
+                <select class="input-style select">
+                    <option value="JavaScript" class="opcao">JavaScript</option>
+                    <option value="HTML" class="opcao">HTML</option>
+                    <option value="CSS" class="opcao">CSS</option>
                 </select>
-                <input type="color" value="#6BD1FF" class="projeto__input color">
-                </div>
+                <input type="color" class="projeto__color" value="#69cefb">
+            </div>
 
-                <button class="salvar">Salvar Projeto</button>
-            </section>
-        </div>
-        
+            <button class="botao salvar">Salvar projeto</button>
+        </section>
     </main>
     <script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

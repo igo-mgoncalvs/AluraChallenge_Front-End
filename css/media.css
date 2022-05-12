@@ -1,0 +1,160 @@
+@media (max-width:768px) {
+
+    .header {
+        display: grid;
+        grid-template-columns: 0.4fr 10px 1fr 10px 0.1fr;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*------------MENU-----------*/
+
+    .menu {
+        display: none;
+        position: absolute;
+
+        background-color: var(--azul-menu);
+        padding: 24px;
+        border-radius: 8px;
+
+        top: 100px;
+        left: calc(100vw - 267px);
+
+        height: 100%;
+    }
+
+    .menu .titulo {
+        display: none;
+    }
+
+    .header__perfil{
+        display: none;
+    }
+
+    .icone-box {
+        display: flex;
+        justify-content: flex-end;
+        grid-area: 1/5/1/6;
+    }
+
+    .icon-lupa {
+        display: none;
+    }
+
+    .icone-menu:hover{
+        background-color: #5081FB29;
+        transition: 1s;
+    }
+    
+    .icone{
+        border: none;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+    }
+    
+
+    .icon-menu {
+        background: url(../img/Menu.svg) no-repeat center;
+    }
+    /*------------CODE-----------*/
+
+    .code__campo {
+        max-width: none;
+    }
+
+    .botao {
+        margin-bottom: 40px;
+    }
+
+    /*-----------PROJETO----------*/
+
+    .projeto {
+        padding: 0;
+    }
+
+    .titulo {
+        margin-bottom: 16px;
+    }
+
+    .responsivo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .select{
+        width: 50%;
+        margin-right: 16px;
+    }
+
+    .projeto__color {
+        margin-top: 0;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .header {
+        display: grid;
+        grid-template-columns: 0.4fr 10px 1fr 10px 0.9fr;
+    }
+
+    .header__barradepesquisa{
+        display: none;
+        grid-column: 1/5;
+        width: calc(100vw - 126px);
+    }
+
+    .icone-box{
+        justify-content: flex-end;
+        padding: 16px 0;
+    }
+
+    .icon-lupa{
+        display: flex;
+        background: url(../img/Lupa.svg) no-repeat center;
+    }
+
+    .responsivo {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .select {
+        width: 100%;
+    }
+
+    .projeto__color{
+        margin-top: 16px;
+        width: 100%;
+    }
+}
+
+.ativa {
+    display: flex;
+}
+
+.disabled {
+    display: none;
+}
+
+.icone-fechar {
+    background: url(../img/Fechar.svg) no-repeat center;
+    background-size: 17px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1030px) {
+    .header {
+        display: grid;
+        grid-template-columns: 0.4fr 10px 1fr 10px 0.5fr;
+    }
+
+    .projeto {
+        padding: 0;
+    }    
+}
