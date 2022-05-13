@@ -1,11 +1,149 @@
 main {
     display: grid;
-    grid-template-columns: 0.28fr 10px 0.5fr 24px 0.5fr;
+    grid-template-columns: 0.29fr 0 1fr;
 }
 
-.cards__code {
-    grid-column: 3/5;
+/*---------TODOS OS CARDS---------*/
+
+.secao__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-column: 3/4;
+
+    width: 100%;
+}
+
+.card:nth-child(n + 3) {
+    margin-top: 24px;
+}
+
+.card:nth-child() {
+    margin-top: 0;
+}
+
+/*--------------CODE-------------*/
+
+.card{
+    background-color: var(--preto-16);
+    border-radius: 8px;
+    color: white;
+    width: 49%;
+}
+
+.card__code-box {
     background-color: aqua;
+    border-radius: 8px;
     padding: 24px;
+}
+
+.card__code {
+    height: 240px;
+}
+
+
+/*--------------PROJETO----------*/
+
+.card__projeto {
+    padding: 0 24px;
+}
+
+.card__titulo {
+    margin-top: 24px;
+    font-size: 21px;
+}
+
+.card__descricao {
+    margin-top: 16px;
+    opacity: 80%;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+
+/*------------INTERAÇÕES------------*/
+
+.card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__interacoes{
+    display: flex;
+    margin-top: 24px;
+    padding: 12px 0 35px 0;
+}
+
+.card__interacoes-box{
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.card__interacoes-box:hover {
+    background-color: var(--azul-normal-8);
+    cursor: pointer;
+}
+
+.card__interacoes-comentario{
+    margin-right: 8px;
+}
+
+.card__interacoes-curtir{
+    margin-right: 8px;
+    fill: aliceblue;
+}
+
+.curtiu {
+    display: block;
+    fill: #F65151;
+}
+
+.card__perfil{
+    display: flex;
+    align-items: center;
+}
+
+.card__perfil-foto{
+    margin-right: 8px;
+    border-radius: 100%;
+
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 425px), (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    main {
+        display: flex;
+    }
+
+    .secao__cards {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+    }
+
+    .card:nth-child(n + 1) {
+        margin-top: 24px;
+    }
+    
+    .card__projeto {
+        padding: 0 24px;
+    }
+    .card__interacoes-box {
+        margin-right: 5px;
+    }
 }
 

@@ -37,11 +37,19 @@ main {
 }
 
 .icon-code {
-    background: var(--azul-normal) url(../img/Code.svg) no-repeat center;
+    background:url(../img/Code.svg) no-repeat center;
 }
 
 .icon-comunidade {
-    background: var(--azul-normal-16) url(../img/Comunidade.svg) no-repeat center;
+    background: url(../img/Comunidade.svg) no-repeat center;
+}
+
+.ativo-icone {
+    background-color: var(--azul-normal);
+}
+
+.desativo-icone {
+    background-color: var(--azul-normal-16);
 }
 
 .desativo {
