@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/dracula.css">
+    <link rel="stylesheet" href="css/darcula.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
@@ -51,7 +51,7 @@
 
         <section class="code">
             <div class="code__campo--box">
-                <code contenteditable="true" id="tab" class="code__campo hljs" aria-label="Editor de Codigo"></code>
+                <code contenteditable="true" id="tab" class="code__campo hljs" aria-label="Editor de Codigo" data-code=""></code>
             </div>
 
             <button class="botao">Visualizar com o highlight</button>
@@ -59,18 +59,18 @@
 
         <section class="projeto">
             <p class="titulo">PROJETO</p>
-            <input type="text" class="input-style" placeholder="Nome do seu projeto">
-            <textarea class="input-style descricao" placeholder="Descrição do seu projeto"></textarea>
+            <input type="text" class="input-style" placeholder="Nome do seu projeto" data-titulo="">
+            <textarea class="input-style descricao" placeholder="Descrição do seu projeto" data-descricao=""></textarea>
 
             <p class="titulo personalizacao">PERSONALIZAÇÃO</p>
             
             <div class="responsivo">
                 <select class="input-style select">
-                    <option value="JavaScript" class="opcao">JavaScript</option>
-                    <option value="HTML" class="opcao">HTML</option>
-                    <option value="CSS" class="opcao">CSS</option>
+                    <option value="javascript" class="opcao">JavaScript</option>
+                    <option value="html" class="opcao">HTML</option>
+                    <option value="css" class="opcao">CSS</option>
                 </select>
-                <input type="color" class="projeto__color" value="#69cefb">
+                <input type="color" class="projeto__color" value="#69cefb" data-color="">
             </div>
 
             <button class="botao salvar">Salvar projeto</button>
@@ -78,9 +78,7 @@
     </main>
     <script src="js/main.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="js/index.js"></script>
-
-    <script src="js/comunidade.js"></script>
 </body>
 </html>
