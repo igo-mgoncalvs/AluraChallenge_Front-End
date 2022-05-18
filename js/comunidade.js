@@ -1,34 +1,37 @@
 //Adiconar card na aba comunidade
-const todosOsProjetos = document.querySelector('.secao__cards')
+const areaDosProjetos = document.querySelector('.secao__cards')
 
 new function (){
-    mostraProjetos ()
-    console.log('olá')
+    mostraProjetos()
 } 
 
 function mostraProjetos () {
     if (localStorage.length == 0) {
         return
     }
-
-    let todosOsProjetos = []    
+    let todosOsProjetos = []  
     for(let i = 0; i < localStorage.length; i++){
         todosOsProjetos.push(JSON.parse(localStorage.getItem(i)))
-        console.log(i)
     }
+
+    todosOsProjetos.forEach(projeto => {
+        areaDosProjetos.innerHTML += criaCard(projeto)
+        const codigoHTML = areaDosProjetos.querySelector(`[data-id="${projeto.id}"]`)
+        codigoHTML.querySelector('code').innerText = projeto.detalhesDoProjeto.codigo
+    })
 }
 
 
-function criaCard () {
+function criaCard (projeto) {
     let card = `
-        <div class="cards">
-            <div class="card__code-box">
-                <code class="code__campo card__code" aria-label="Editor de Codigo"></code>
+        <div class="card" data-id="${projeto.id}">
+            <div class="card__code-box" style="background-color: ${projeto.detalhesDoProjeto.cor};">
+                <code class="code__campo hljs ${projeto.detalhesDoProjeto.codigo}" aria-label="Editor de Codigo"></code>
             </div>
 
             <div class="card__projeto">
-                <h1 class="card__titulo">${detalhesDoProjeto.descricao}</h1>
-                <p class="card__descricao">Essa é a descrição do meu projeto.</p>
+                <h1 class="card__titulo">${projeto.detalhesDoProjeto.titulo}</h1>
+                <p class="card__descricao">${projeto.detalhesDoProjeto.descricao}</p>
 
                 <div class="card__footer">
                     <div class="card__interacoes">
@@ -57,17 +60,28 @@ function criaCard () {
 
 
 
-/*
-const botaoCurtir = document.querySelector ('.curtir')
+//Cutir
+
+const botaoCurtir = document.querySelectorAll ('.curtir')
 const curtir = document.querySelector ('.card__interacoes-curtir')
 
 const numeroCurtidas = document.querySelector ('.numero-curtidas')
 
+function botaoId () {
+    let n = 0
+    let botaId = botaoCurtir[n]
+    for(let id = 0; id < botaId; id++){
+        n++
+    }
+    
+    console.log(n)
+}
 
-//Cutir
-
+/*
 botaoCurtir.addEventListener('click', () => {
+    console.log('olá')
 
+    
     curtir.classList.toggle ('curtiu')
 
     if (curtir.classList[1] == 'curtiu') {
@@ -76,14 +90,4 @@ botaoCurtir.addEventListener('click', () => {
         numeroCurtidas.innerText = '9'
     }
 })
-
-
-//Adiconar card na aba comunidade
-
-const salvar = document.querySelector ('.salvar')
-
-salvar.addEventListener('click', () => {
-    console.log('olá mundo')
-})
-
 */

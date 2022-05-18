@@ -38,10 +38,11 @@ function criaProjeto () {
     let projeto = {
         'id' : atribuiId(),
         'detalhesDoProjeto': {
-            'codigo': codigo.innerText,
+            'codigo': areaDoCodigo.querySelector ('code').innerText,
             'titulo': titulo.value,
             'descricao': descricao.value,
-            'cor': corDoProjeto.value
+            'cor': corDoProjeto.value,
+            'linguagem': linguagem.value
         }
     }
 

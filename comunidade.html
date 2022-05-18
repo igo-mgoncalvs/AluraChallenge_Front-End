@@ -9,13 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/darcula.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/comunidade.css">
+    <link rel="stylesheet" href="css/darcula.css">
 </head>
 <body>
     <header>
@@ -53,7 +52,13 @@
         <section class="secao__cards">
         </section>
     </main>
-
     <script src="js/comunidade.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+        const todosOsCodigos = document.querySelectorAll('code')
+        todosOsCodigos.forEach(codigo => {
+            hljs.highlightBlock(codigo)
+        })
+    </script>
 </body>
 </html>
