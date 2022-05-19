@@ -77,7 +77,6 @@ main {
 .card__interacoes-box{
     display: flex;
     align-items: center;
-    margin-right: 16px;
     border-radius: 8px;
     padding: 10px;
     transition: 0.5s;
@@ -95,6 +94,10 @@ main {
 .card__interacoes-curtir{
     margin-right: 8px;
     fill: aliceblue;
+}
+
+.card__interacoes-lixeira {
+    width: 24px;
 }
 
 .curtiu {

@@ -21,16 +21,18 @@ const codigo = document.querySelector('[data-code]')
 const titulo = document.querySelector ('[data-titulo]')
 const descricao = document.querySelector ('[data-descricao]')
 const corDoProjeto = document.querySelector('[data-color]')
+const corDoEditor = document.querySelector('.code__campo--box')
 const salvaProjeto = document.querySelector('.salvar')
 
-salvaProjeto.addEventListener('click', ()=> {
+salvaProjeto.addEventListener('click', ()=> {        
     if(typeof(Storage) !== 'undefined') {
         const projetoLocalStorage = criaProjeto()
 
         salvaProjetoLocalStorage(projetoLocalStorage)
         console.log(projetoLocalStorage)
-    }else {
-        console.log('não suporta o localstrorage')
+    }
+    if(confirm ('Seu projeto foi salvo e pode ser visto na aba de Comunidade')){
+        apagaDados()
     }
 })
 
@@ -49,10 +51,20 @@ function criaProjeto () {
     return projeto
 }
 
+function apagaDados () {
+    areaDoCodigo.querySelector('code').innerText = ''
+    titulo.value = ''
+    descricao.value = ''
+    corDoProjeto.value ='#6BD1FF'
+    corDoEditor.style.backgroundColor = '#6BD1FF'
+    linguagem.value = 'javascript'
+}
+
 function atribuiId() {
     return localStorage.length
 }
 
 function salvaProjetoLocalStorage(objetoJson){
     localStorage.setItem(objetoJson.id, JSON.stringify(objetoJson))
+    console.log(objetoJson.id)
 }

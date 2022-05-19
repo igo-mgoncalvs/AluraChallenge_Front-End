@@ -25,7 +25,7 @@ botaoLupa.addEventListener ('click', () => {
 //Cor do Editor
 
 const color = document.querySelector('.projeto__color');
-const editorColor =document.querySelector('.code__campo--box');
+const editorColor = document.querySelector('.code__campo--box');
 
 color.addEventListener('change', () =>{
     editorColor.style.backgroundColor = color.value
