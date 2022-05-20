@@ -1,33 +1,35 @@
 //Adiconar card na aba comunidade
 const areaDosProjetos = document.querySelector('.secao__cards')
+const todosOsProjetos = [] 
+let i = 0
 
 new function (){
     mostraProjetos()
 
 } 
 
+
+
 function mostraProjetos () {
     if (localStorage.length == 0) {
         return
+    } 
+
+    for (i ; i < localStorage.length; i++){
+        todosOsProjetos.push(JSON.parse(localStorage[i]))
     }
-    let todosOsProjetos = []  
-    for(let i = 0; i < localStorage.length; i++){
-        todosOsProjetos.push(JSON.parse(localStorage.getItem(i)))
-    }
+
 
     todosOsProjetos.forEach(projeto => {
         areaDosProjetos.innerHTML += criaCard(projeto)
         const codigoHTML = areaDosProjetos.querySelector(`[data-id="${projeto.id}"]`)
         codigoHTML.querySelector('code').innerText = projeto.detalhesDoProjeto.codigo
     })
+
 }
 
-
 function criaCard (projeto) {
-    if(projeto == null){
-        projeto++
-    }
-    const = 
+    console.log(projeto)
     let card = `
         <div class="card" data-id="${projeto.id}">
             <div class="card__code-box" style="background-color: ${projeto.detalhesDoProjeto.cor};">
@@ -50,10 +52,6 @@ function criaCard (projeto) {
                                 <path d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"/>
                             </svg>
                             <p class="numero-curtidas">9</p>
-                        </div>
-
-                        <div class="card__interacoes-box">
-                            <img src="img/icons8-lixo (1).svg" alt="Comentario" class="card__interacoes-lixeira">
                         </div>
                     </div>
                     <div class="card__perfil">
@@ -85,21 +83,6 @@ for (let id = 0; id < botaoCurtir.length; id++){
             numeroCurtidas[id].innerText = '10'
         } else {
             numeroCurtidas[id].innerText = '9'
-        }
-    }
-}
-
-//Exluir projeto
-
-const excluir = document.querySelectorAll ('.card__interacoes-lixeira')
-
-for (let e = 0; e < excluir.length; e++) {
-    const excluirId = excluir[e]
-
-    excluirId.onclick = function () {
-
-        if (confirm ('Você tem certeza que deseja excluir esse item')){
-            excluiProjetoLocalStorage()
         }
     }
 }
